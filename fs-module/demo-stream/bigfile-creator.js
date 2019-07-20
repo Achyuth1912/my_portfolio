@@ -1,0 +1,9 @@
+const fs = require('fs');
+
+let file = fs.createWriteStream(__dirname+'/bigfile.txt',{encoding:'utf-8'});
+
+for(var i=0;i<1e6;i++) {
+    file.write('The filtered position operatr $[<identifier>] identifies the array elements that match the arrayFilters condition for an update operation');
+}
+
+file.end()
